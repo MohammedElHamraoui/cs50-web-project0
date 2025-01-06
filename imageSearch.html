@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Image Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  </body>
+  <body>
+    <header class="header">
+      <h1><a href="index.html">Google</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="advancedSearch.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Advanced Search</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form action="https://www.google.com/search">
+        <!-- https://www.google.com/search?q=harvard&sclient=img&udm=2 -->
+
+      <h2>Image Search</h2>
+        <input
+          type="search"
+          id="search"
+          name="q"
+          placeholder="Enter search term"
+          required
+          inlength="4"
+          axlength="8"
+          size="50"
+        />
+        <input type="hidden" name="sclient" value="img">
+        <input type="hidden" name="udm" value="2">
+        <input type="submit" value="Google Search" />
+      </form>
+    </main>
+  </body>
+</html>

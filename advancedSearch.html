@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Advanced Search</title>
+    <link rel="stylesheet" href="styleAdvancedSearch.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1><a href="index.html">Google</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="imageSearch.html" target="_blank" rel="noopener noreferrer"
+              >Image Search</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <h3>Find pages with...</h3>
+
+      <form action="https://www.google.com/search">
+        <ul>
+          <!-- <li>Find pages with...</li> -->
+          <li>
+            <label for="allFollowingWords">all the following words:</label>
+            <input type="search" id="allFollowingWords" name="as_q" size="50" />
+          </li>
+          <li>
+            <label for="thatWordExactly"
+              >that word or expression exactly:</label
+            >
+            <input type="search" id="thatWordExactly" name="as_epq" size="50" />
+          </li>
+          <li>
+            <label for="oneFollowingWords">one of the following words:</label>
+            <input
+              type="search"
+              id="oneFollowingWords"
+              name="as_oq"
+              size="50"
+            />
+          </li>
+          <li>
+            <label for="noneFollowingWords">none of the following words:</label>
+            <input
+              type="search"
+              id="noneFollowingWords"
+              name="as_eq"
+              size="50"
+            />
+          </li>
+        </ul>
+        <input type="submit" value="Google Advanced Search" />
+      </form>
+    </main>
+  </body>
+</html>

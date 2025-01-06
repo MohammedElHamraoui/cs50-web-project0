@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Search</title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      function feelingLucky(event) {
+        event.preventDefault(); // Prevent the default form submission
+        const query = document.getElementById("search").value;
+        if (query.trim()) {
+          // Redirect to Google's "I'm Feeling Lucky" URL
+          window.location.href = `https://www.google.com/search?q=${encodeURIComponent(
+            query
+          )}&btnI=I`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <h1><a href="index.html">Google</a></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="imageSearch.html" target="_blank" rel="noopener noreferrer"
+              >Image Search</a
+            >
+          </li>
+          <li>
+            <a
+              href="advancedSearch.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Advanced Search</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form action="https://www.google.com/search" method="get">
+        <input
+          type="search"
+          id="search"
+          name="q"
+          placeholder="Enter search term"
+          required
+          size="50"
+        />
+        <input type="submit" value="Google Search" />
+        <input
+          type="button"
+          value="I’m Feeling Lucky"
+          onclick="feelingLucky(event)"
+        />
+      </form>
+    </main>
+  </body>
+</html>
